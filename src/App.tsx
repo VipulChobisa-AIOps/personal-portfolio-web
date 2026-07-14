@@ -116,7 +116,7 @@ export default function App() {
 
             {/* Right: GitHub Avatar Profile Image */}
             <div className="md:col-span-4 flex justify-center md:justify-end">
-              <div className="relative w-28 h-28 rounded-full overflow-hidden border border-[#1e293b] p-0.5 bg-slate-900 shadow-md">
+              <div className="relative w-[50px] h-[50px] rounded-full overflow-hidden border border-[#1e293b] p-0.5 bg-slate-900 shadow-md">
                 <img 
                   src="https://github.com/VipulChobisa-AIOps.png" 
                   alt="Vipul Kumar Chobisa" 

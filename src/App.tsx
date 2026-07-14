@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { 
-  Globe, 
   Mail, 
   Award, 
   Layers, 
@@ -44,27 +43,24 @@ const BLOGS = [
     domain: 'ask4write.com',
     url: 'https://ask4write.com/about-us/',
     niche: 'Education & Management',
-    desc: 'Articles on the latest education updates, strategic management methodologies, and general knowledge updates.',
-    gradClass: 'gradient-bg-1',
-    accentColor: '#35b7bd'
+    desc: 'Latest education updates, university guides, competitive exam updates, and strategic management articles.',
+    gradClass: 'gradient-header-1'
   },
   {
     title: 'AskforWrite Entertainment',
     domain: 'askforwrite.com',
     url: 'https://askforwrite.com/about-us/',
     niche: 'OTT, Films & Celebrity',
-    desc: 'Trending streaming platform content releases, major television updates, film awards, and celebrity reviews.',
-    gradClass: 'gradient-bg-2',
-    accentColor: '#a855f7'
+    desc: 'Trending streaming platform content releases, film reviews, Bollywood/Hollywood updates, and television awards.',
+    gradClass: 'gradient-header-2'
   },
   {
     title: 'AskforWrite Sports',
     domain: 'askforwrite.in',
     url: 'https://askforwrite.in/about-us-askforwrite-sports/',
-    niche: 'Cricket & Match Analysis',
-    desc: 'Hot cricket news domestic selections, IPL updates, live scorecard breakdowns, and international matches analysis.',
-    gradClass: 'gradient-bg-3',
-    accentColor: '#f97316'
+    niche: 'Cricket & Tournaments',
+    desc: 'Deep-dive cricket news, match analysis, domestic selection alerts, IPL squads updates, and cricketer discussions.',
+    gradClass: 'gradient-header-3'
   },
   {
     title: 'AskforWrite Technology',
@@ -72,8 +68,7 @@ const BLOGS = [
     url: 'https://askforwrite.info/home-askforwrite-technology/about-us/',
     niche: 'AI, Blockchain & IoT',
     desc: 'Expert technical insights covering blockchain layers, AI models (DeepSeek, ChatGPT), and internet security research.',
-    gradClass: 'gradient-bg-4',
-    accentColor: '#3b82f6'
+    gradClass: 'gradient-header-4'
   }
 ];
 
@@ -141,242 +136,249 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-[#030308] text-[#f1f5f9] flex items-center justify-center p-4 md:p-8">
-      {/* ── CENTRAL BENTO CONTAINER (WEB VIEW LAYOUT) ────────────────────────── */}
-      <div className="w-full max-w-7xl mx-auto">
-        
-        {/* Main Grid Layout */}
-        <div className="bento-grid">
-          
-          {/* 👤 LEFT COLUMN: PROFILE CARD (Spans 4 columns) */}
-          <div className="bento-card col-span-4 flex flex-col justify-between min-h-[500px]">
+    <div className="min-h-screen bg-[#030308] text-[#f8fafc] flex flex-col">
+      {/* ── HEADER ────────────────────────────────────────────────────────── */}
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#030308]/80 backdrop-blur-md">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-500 flex items-center justify-center font-bold text-white shadow-md shadow-indigo-600/20">
+              V
+            </div>
             <div>
-              {/* Header profile image fetched from GitHub */}
-              <div className="relative w-28 h-28 rounded-3xl overflow-hidden mb-6 border border-white/10 p-1 bg-white/5 shadow-xl">
+              <span className="font-bold text-sm tracking-tight text-white block">Vipul Kumar Chobisa</span>
+              <span className="text-[10px] text-indigo-400 font-semibold uppercase tracking-wider block">AI-Ops Specialist</span>
+            </div>
+          </div>
+
+          <nav className="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-400">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#blogs" className="hover:text-white transition-colors">Blogs Network</a>
+            <a href="#repos" className="hover:text-white transition-colors">Engineering</a>
+            <a href="#operations" className="hover:text-white transition-colors">Operations</a>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <a 
+              href="https://github.com/VipulChobisa-AIOps" 
+              target="_blank" 
+              rel="noreferrer"
+              className="p-2 rounded-lg bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all text-slate-400 hover:text-white"
+            >
+              <GithubIcon className="w-4.5 h-4.5" />
+            </a>
+            <a 
+              href="https://linkedin.com/in/vipul-chobisa" 
+              target="_blank" 
+              rel="noreferrer"
+              className="p-2 rounded-lg bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all text-slate-400 hover:text-white"
+            >
+              <LinkedinIcon className="w-4.5 h-4.5" />
+            </a>
+          </div>
+        </div>
+      </header>
+
+      {/* ── HERO SECTION ─────────────────────────────────────────────────── */}
+      <section id="about" className="py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-12 gap-12 items-center">
+            
+            {/* Left: Info Details */}
+            <div className="md:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-bold text-indigo-400">
+                <Award className="w-3.5 h-3.5" /> B.Tech (Computer Eng) & MBA (Operations) Hybrid
+              </div>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+                Bridging Software Engineering & <br/>
+                <span className="text-indigo-400">Industrial Logistics Operations</span>
+              </h1>
+              <p className="text-slate-400 text-sm md:text-base leading-relaxed">
+                I specialize in automating physical workflows through Agentic AI models, real-time path tracking networks, and custom mobile systems. Also managing and authoring the **AskforWrite** digital brand ecosystem.
+              </p>
+              
+              <div className="flex flex-wrap gap-4 pt-2">
+                <a 
+                  href="#blogs" 
+                  className="px-6 h-12 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-lg shadow-indigo-600/25 transition-all"
+                >
+                  Browse Blogs Network <ChevronRight className="w-4 h-4" />
+                </a>
+                <a 
+                  href="mailto:vipulchobisa@gmail.com"
+                  className="px-6 h-12 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all"
+                >
+                  <Mail className="w-4 h-4" /> Contact Email
+                </a>
+              </div>
+            </div>
+
+            {/* Right: GitHub Photograph Container */}
+            <div className="md:col-span-5 flex justify-center">
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-[2.5rem] overflow-hidden border border-white/10 p-1 bg-white/5 shadow-2xl">
                 <img 
                   src="https://github.com/VipulChobisa-AIOps.png" 
                   alt="Vipul Kumar Chobisa" 
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover rounded-[2.2rem]"
                   onError={(e) => {
-                    // Fallback avatar in case of request limits
                     e.currentTarget.src = 'https://avatars.githubusercontent.com/u/165218?v=4';
                   }}
                 />
-                <span className="absolute bottom-2 right-2 w-3.5 h-3.5 bg-emerald-500 border-2 border-[#050510] rounded-full" />
-              </div>
-
-              {/* Identity & Credentials */}
-              <h1 className="text-2xl font-extrabold tracking-tight text-white mb-1">Vipul Kumar Chobisa</h1>
-              <p className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">AI-Ops Specialist & Developer</p>
-              
-              <div className="space-y-2 mb-6">
-                <div className="flex items-center gap-2 text-xs text-slate-400">
-                  <Award className="w-4 h-4 text-indigo-400 flex-shrink-0" />
-                  <span>B.Tech in Computer Engineering</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-slate-400">
-                  <Layers className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                  <span>MBA in Operations & Production Management</span>
-                </div>
-              </div>
-
-              <p className="text-xs text-slate-400 leading-relaxed mb-6">
-                I sit at the intersection of software development and physical supply chain operations, deploying agentic workflows, custom mobile applications, and SGE-optimized search schema architectures.
-              </p>
-            </div>
-
-            {/* Social Connection Rows */}
-            <div className="space-y-3 pt-6 border-t border-white/5">
-              <a 
-                href="mailto:vipulchobisa@gmail.com"
-                className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/35 hover:bg-white/10 transition-all text-xs font-semibold text-slate-300"
-              >
-                <span className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-slate-400" /> vipulchobisa@gmail.com
-                </span>
-                <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
-              </a>
-
-              <div className="grid grid-cols-3 gap-2">
-                <a 
-                  href="https://linkedin.com/in/vipul-chobisa"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/35 hover:bg-white/10 transition-all text-slate-400 hover:text-white"
-                >
-                  <LinkedinIcon className="w-4.5 h-4.5 mb-1" />
-                  <span className="text-[9px] font-bold uppercase tracking-wider">LinkedIn</span>
-                </a>
-                <a 
-                  href="https://github.com/VipulChobisa-AIOps"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/35 hover:bg-white/10 transition-all text-slate-400 hover:text-white"
-                >
-                  <GithubIcon className="w-4.5 h-4.5 mb-1" />
-                  <span className="text-[9px] font-bold uppercase tracking-wider">GitHub</span>
-                </a>
-                <a 
-                  href="https://youtube.com/@vipulrockstar"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex flex-col items-center justify-center p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/35 hover:bg-white/10 transition-all text-slate-400 hover:text-white"
-                >
-                  <YoutubeIcon className="w-4.5 h-4.5 mb-1" />
-                  <span className="text-[9px] font-bold uppercase tracking-wider">YouTube</span>
-                </a>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ── BLOGS SECTION (POSTCARD GRID VIEW) ───────────────────────────── */}
+      <section id="blogs" className="py-20 border-t border-white/5 bg-[#070714]/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-white">AskforWrite Blogs Network</h2>
+            <p className="text-xs text-slate-500 mt-1">Structured digital publications serving distinct educational, sports, and technical niches.</p>
           </div>
 
-          {/* 🌐 RIGHT COLUMN: BLOG ASSETS CARD (Spans 8 columns) */}
-          <div className="bento-card col-span-8 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h2 className="text-xl font-extrabold text-white">AskforWrite Digital Blogs</h2>
-                  <p className="text-xs text-slate-500 mt-1">Four verified content portals, each targeting a precise niche domain.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {BLOGS.map((blog, idx) => (
+              <div key={idx} className="blog-postcard">
+                <div className={`h-28 ${blog.gradClass} p-4 flex flex-col justify-between`}>
+                  <span className="px-2 py-0.5 rounded bg-black/35 backdrop-blur-sm text-[8px] font-bold text-white uppercase tracking-widest self-start">
+                    {blog.niche}
+                  </span>
+                  <span className="text-[10px] font-mono text-white/70 self-end font-semibold">{blog.domain}</span>
                 </div>
-                <div className="px-3 h-7 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-400 flex items-center gap-1.5 uppercase tracking-wider">
-                  <Globe className="w-3.5 h-3.5" /> 4 Verified Portals
-                </div>
-              </div>
-
-              {/* The Postcard Grid */}
-              <div className="grid sm:grid-cols-2 gap-4">
-                {BLOGS.map((blog, idx) => (
-                  <div key={idx} className="postcard">
-                    {/* Visual Card Header */}
-                    <div className={`h-24 ${blog.gradClass} p-4 flex flex-col justify-between`}>
-                      <span className="px-2 py-0.5 rounded bg-black/30 backdrop-blur-sm text-[8px] font-bold text-white uppercase tracking-widest self-start">
-                        {blog.niche}
-                      </span>
-                      <span className="text-[10px] font-mono text-white/70 self-end font-semibold">{blog.domain}</span>
-                    </div>
-                    {/* Content Body */}
-                    <div className="p-4 flex-1 flex flex-col justify-between">
-                      <div>
-                        <h4 className="text-sm font-bold text-white mb-2">{blog.title}</h4>
-                        <p className="text-slate-400 text-[11px] leading-relaxed mb-4">{blog.desc}</p>
-                      </div>
-                      <a 
-                        href={blog.url} 
-                        target="_blank" 
-                        rel="noreferrer"
-                        className="h-8 rounded-lg border border-white/5 bg-white/5 hover:bg-white/10 text-white font-bold text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition-all"
-                      >
-                        Visit Blog <ExternalLink className="w-3 h-3" />
-                      </a>
-                    </div>
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <h3 className="text-sm font-bold text-white">{blog.title}</h3>
+                    <p className="text-slate-400 text-xs leading-relaxed">{blog.desc}</p>
                   </div>
-                ))}
+                  <a 
+                    href={blog.url} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="mt-6 w-full h-9 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 text-white font-bold text-xs flex items-center justify-center gap-1 transition-colors"
+                  >
+                    Visit Page <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── REPOSITORIES SECTION (3-COLUMN GRID) ─────────────────────────── */}
+      <section id="repos" className="py-20 border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6">
+          
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-white">Open Source Engineering</h2>
+              <p className="text-xs text-slate-500 mt-1">Structured tools, real-time trackers, and AI integration codes.</p>
+            </div>
+
+            {/* Filter Tabs */}
+            <div className="flex bg-white/5 border border-white/5 p-1 rounded-xl self-start">
+              {[
+                { id: 'all', label: 'All Repos' },
+                { id: 'fullstack', label: 'Apps & Mobile' },
+                { id: 'ai', label: 'AI & Data' },
+                { id: 'ops', label: 'Operations' }
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)}
+                  className={`px-3.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all ${
+                    activeTab === tab.id 
+                      ? 'bg-indigo-600 text-white shadow-md' 
+                      : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* 💻 SECOND ROW: ENGINEERING REPOSITORIES (Spans 8 columns) */}
-          <div className="bento-card col-span-8 flex flex-col justify-between min-h-[480px]">
-            <div>
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
-                <div>
-                  <h2 className="text-xl font-extrabold text-white">Engineering Repositories</h2>
-                  <p className="text-xs text-slate-500 mt-1">Open-source applications, tools, and semantic schemas.</p>
-                </div>
-
-                {/* Filters */}
-                <div className="flex bg-white/5 border border-white/5 p-1 rounded-xl">
-                  {[
-                    { id: 'all', label: 'All' },
-                    { id: 'fullstack', label: 'Apps & Mobile' },
-                    { id: 'ai', label: 'AI & Data' },
-                    { id: 'ops', label: 'Operations' }
-                  ].map(tab => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id as any)}
-                      className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all ${
-                        activeTab === tab.id 
-                          ? 'bg-indigo-600 text-white shadow-md' 
-                          : 'text-slate-400 hover:text-white'
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Repos Card Deck */}
-              <div className="grid sm:grid-cols-3 gap-4">
-                {filteredRepos.map((repo, idx) => {
-                  const IconComp = repo.icon;
-                  return (
-                    <a 
-                      key={idx}
-                      href={repo.github} 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="group flex flex-col justify-between p-4 rounded-2xl bg-white/[0.01] border border-white/5 hover:border-indigo-500/35 hover:bg-white/[0.03] transition-all h-48"
-                    >
-                      <div>
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="p-2 rounded-xl bg-white/5 border border-white/5 text-slate-300">
-                            <IconComp className="w-4 h-4" />
-                          </div>
-                          <span className="text-[8px] font-bold text-slate-500 uppercase tracking-widest">
-                            {repo.category}
-                          </span>
-                        </div>
-
-                        <h4 className="text-xs font-bold text-white group-hover:text-indigo-400 transition-colors mb-2">
-                          {repo.name}
-                        </h4>
-                        
-                        <p className="text-slate-400 text-[10px] line-clamp-3 leading-relaxed">
-                          {repo.description}
-                        </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredRepos.map((repo, idx) => {
+              const Icon = repo.icon;
+              return (
+                <a 
+                  key={idx}
+                  href={repo.github} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="portfolio-card flex flex-col justify-between h-[230px] group"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="p-2 rounded-xl bg-white/5 border border-white/5 text-slate-300">
+                        <Icon className="w-4 h-4" />
                       </div>
+                      <span className="text-[8px] font-bold text-slate-500 uppercase tracking-widest">
+                        {repo.category}
+                      </span>
+                    </div>
+                    <h3 className="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors mb-2">
+                      {repo.name}
+                    </h3>
+                    <p className="text-slate-400 text-xs line-clamp-3 leading-relaxed">
+                      {repo.description}
+                    </p>
+                  </div>
 
-                      <div className="flex flex-wrap gap-1 mt-3">
-                        {repo.tech.slice(0, 2).map((t, i) => (
-                          <span key={i} className="px-1.5 py-0.5 rounded bg-white/5 border border-white/5 text-[8px] font-semibold text-slate-400">
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
+                  <div className="flex flex-wrap gap-1.5 mt-4">
+                    {repo.tech.map((t, i) => (
+                      <span key={i} className="px-2 py-0.5 rounded bg-white/5 border border-white/5 text-[9px] font-semibold text-slate-400">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </a>
+              );
+            })}
           </div>
 
-          {/* 📊 SECOND ROW: OPERATIONS CASE STUDY (Spans 4 columns) */}
-          <div className="bento-card col-span-4 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center gap-2 mb-6">
-                <div className="p-2 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400">
-                  <PieChart className="w-4 h-4" />
-                </div>
-                <div>
-                  <h3 className="text-sm font-extrabold text-white">Operations Case Study</h3>
-                  <p className="text-[10px] text-slate-500">Adani Wilmar Layouts</p>
+        </div>
+      </section>
+
+      {/* ── OPERATIONS SECTION ───────────────────────────────────────────── */}
+      <section id="operations" className="py-20 border-t border-white/5 bg-[#070714]/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="portfolio-card p-8 md:p-12">
+            <div className="grid md:grid-cols-12 gap-12 items-center">
+              
+              <div className="md:col-span-7 space-y-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs font-bold text-purple-400">
+                  <PieChart className="w-3.5 h-3.5" /> Adani Wilmar Operations
+                </span>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-white">35-Warehouse Layout Planning & EOQ Simulations</h2>
+                <p className="text-slate-400 text-xs md:text-sm leading-relaxed">
+                  plotted 3D spatial models to eliminate spatial bottlenecks for 35 packaging warehouses during my management tenure at **Adani Wilmar**. Designed reorder safety-stock algorithms to eradicate inventory stockouts and optimized warehouse workflow efficiencies.
+                </p>
+                <div className="pt-2">
+                  <a 
+                    href="https://github.com/VipulChobisa-AIOps/Smart-Warehouse-Automation-System" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-5 h-11 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs transition-colors"
+                  >
+                    View Layout Planning Code <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
                 </div>
               </div>
 
-              <p className="text-xs text-slate-400 leading-relaxed mb-6">
-                Engineered layout planning models for **35 warehouses** using Google Sketch Pro, automating safety-stock reorder thresholds.
-              </p>
-
-              {/* Progress bars */}
-              <div className="space-y-4 mb-6">
+              <div className="md:col-span-5 bg-[#030308]/60 p-6 rounded-2xl border border-white/5 space-y-5">
+                <h3 className="text-xs font-bold text-white uppercase tracking-widest">Simulated Optimization Metrics</h3>
                 {[
                   { label: 'Throughput Delay Reduction', percent: 28, color: 'bg-indigo-500' },
                   { label: 'Floor Space Utilization', percent: 88, color: 'bg-purple-500' },
                   { label: 'Stockout Prevention Threshold', percent: 99, color: 'bg-emerald-500' }
                 ].map((item, idx) => (
                   <div key={idx}>
-                    <div className="flex justify-between text-[9px] font-bold mb-1">
+                    <div className="flex justify-between text-[9px] font-bold mb-1.5">
                       <span className="text-slate-400">{item.label}</span>
                       <span className="text-white">{item.percent}%</span>
                     </div>
@@ -386,21 +388,62 @@ export default function App() {
                   </div>
                 ))}
               </div>
-            </div>
 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FOOTER & CONNECT ─────────────────────────────────────────────── */}
+      <footer className="border-t border-white/5 bg-[#020206] py-16 mt-auto">
+        <div className="max-w-6xl mx-auto px-6 text-center space-y-6">
+          <div className="flex items-center justify-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white text-xs">V</div>
+            <span className="font-bold text-sm tracking-tight text-white">Vipul Kumar Chobisa</span>
+          </div>
+          
+          <p className="text-slate-500 text-xs max-w-md mx-auto leading-relaxed">
+            AI-Ops Specialist combining B.Tech Computer Engineering & MBA Operations foundations.
+          </p>
+
+          <div className="flex justify-center gap-4 pt-2">
             <a 
-              href="https://github.com/VipulChobisa-AIOps/Smart-Warehouse-Automation-System" 
+              href="mailto:vipulchobisa@gmail.com"
+              className="p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/35 hover:bg-white/10 text-slate-400 hover:text-white transition-all"
+            >
+              <Mail className="w-4.5 h-4.5" />
+            </a>
+            <a 
+              href="https://linkedin.com/in/vipul-chobisa"
               target="_blank" 
               rel="noreferrer"
-              className="w-full h-10 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all"
+              className="p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/35 hover:bg-white/10 text-slate-400 hover:text-white transition-all"
             >
-              View Warehouse Code <ExternalLink className="w-3.5 h-3.5" />
+              <LinkedinIcon className="w-4.5 h-4.5" />
+            </a>
+            <a 
+              href="https://github.com/VipulChobisa-AIOps"
+              target="_blank" 
+              rel="noreferrer"
+              className="p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/35 hover:bg-white/10 text-slate-400 hover:text-white transition-all"
+            >
+              <GithubIcon className="w-4.5 h-4.5" />
+            </a>
+            <a 
+              href="https://youtube.com/@vipulrockstar"
+              target="_blank" 
+              rel="noreferrer"
+              className="p-3 rounded-xl bg-white/5 border border-white/5 hover:border-indigo-500/35 hover:bg-white/10 text-slate-400 hover:text-white transition-all"
+            >
+              <YoutubeIcon className="w-4.5 h-4.5" />
             </a>
           </div>
 
+          <div className="text-[10px] text-slate-600 font-semibold uppercase tracking-wider pt-6 border-t border-white/5">
+            © {new Date().getFullYear()} Vipul Kumar Chobisa · All rights reserved.
+          </div>
         </div>
-
-      </div>
+      </footer>
     </div>
   );
 }

@@ -6,15 +6,15 @@
 
 :root {
   --bg-dark: #030308;
-  --bg-card: rgba(255, 255, 255, 0.01);
-  --border-subtle: rgba(255, 255, 255, 0.05);
-  --border-focus: rgba(99, 102, 241, 0.3);
-  --text-main: #f1f5f9;
+  --bg-section: #070714;
+  --bg-card: rgba(255, 255, 255, 0.02);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-glow: rgba(99, 102, 241, 0.25);
+  --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --accent-indigo: #6366f1;
   --accent-purple: #a855f7;
-  --accent-cyan: #06b6d4;
-  --accent-orange: #f97316;
+  --accent-emerald: #10b981;
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   scroll-behavior: smooth;
 }
@@ -22,104 +22,77 @@
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  background-image: 
-    radial-gradient(circle at 5% 5%, rgba(99, 102, 241, 0.04) 0%, transparent 35%),
-    radial-gradient(circle at 95% 95%, rgba(168, 85, 247, 0.04) 0%, transparent 35%);
-  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--bg-dark);
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-indigo);
 }
 
-/* Bento Grid System */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
+/* Container limits */
+.content-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-@media (max-width: 1024px) {
-  .bento-grid {
-    grid-template-columns: repeat(1, 1fr);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-
-/* Bento Card Style */
-.bento-card {
+/* Card Style */
+.portfolio-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 24px;
+  border-radius: 20px;
   padding: 24px;
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-  position: relative;
-  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.bento-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  padding: 1px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-.bento-card:hover {
+.portfolio-card:hover {
+  border-color: var(--border-glow);
   transform: translateY(-2px);
-  border-color: var(--border-focus);
-  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.08);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.06);
 }
 
 /* Postcard Blog Card Style */
-.postcard {
-  background: rgba(255, 255, 255, 0.015);
+.blog-postcard {
+  background: rgba(255, 255, 255, 0.01);
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.25s ease;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.postcard:hover {
-  border-color: rgba(255, 255, 255, 0.12);
-  transform: scale(1.01);
-  background: rgba(255, 255, 255, 0.025);
+.blog-postcard:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.06);
 }
 
-.gradient-bg-1 { background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%); }
-.gradient-bg-2 { background: linear-gradient(135deg, #4c1d95 0%, #b91c1c 100%); }
-.gradient-bg-3 { background: linear-gradient(135deg, #7c2d12 0%, #ea580c 100%); }
-.gradient-bg-4 { background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%); }
+.gradient-header-1 { background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); }
+.gradient-header-2 { background: linear-gradient(135deg, #6b21a8 0%, #581c87 100%); }
+.gradient-header-3 { background: linear-gradient(135deg, #c2410c 0%, #9a3412 100%); }
+.gradient-header-4 { background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%); }
 
 /* Gradient text */
-.text-glow {
-  background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.7) 100%);
+.gradient-heading {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

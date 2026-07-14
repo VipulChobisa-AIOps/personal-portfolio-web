@@ -5,11 +5,11 @@
 }
 
 :root {
-  --bg-dark: #090d16;
-  --bg-card: #0f172a;
+  --bg-dark: #070a13;
+  --bg-card: #0f1626;
   --border-slate: #1e293b;
-  --border-focus: #3b82f6;
-  --text-main: #f8fafc;
+  --border-glow: #3b82f6;
+  --text-main: #f1f5f9;
   --text-muted: #94a3b8;
   --accent-blue: #3b82f6;
   --accent-purple: #a855f7;
@@ -41,28 +41,28 @@ body {
   background: var(--accent-blue);
 }
 
-/* Main Grid Layout Containers */
+/* Layout container */
 .container-max {
-  max-width: 1120px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* Corporate Card Style */
+/* Card Style */
 .corp-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-slate);
   border-radius: 12px;
-  padding: 20px;
+  padding: 24px;
   transition: all 0.2s ease-in-out;
 }
 
 .corp-card:hover {
-  border-color: var(--border-focus);
+  border-color: var(--border-glow);
   box-shadow: 0 4px 20px rgba(59, 130, 246, 0.05);
 }
 
-/* Section Headings */
+/* Headings */
 .section-title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -71,10 +71,23 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  border-bottom: 1px solid var(--border-slate);
+  padding-bottom: 10px;
 }
 
 .section-desc {
   font-size: 0.75rem;
   color: var(--text-muted);
-  margin-top: 2px;
+  margin-top: 6px;
+}
+
+/* Competency Badges */
+.competency-tag {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-slate);
+  color: #e2e8f0;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
 }

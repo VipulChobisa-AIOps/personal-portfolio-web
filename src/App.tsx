@@ -165,7 +165,7 @@ export default function App() {
             {[
               { val: '35 Warehouses', label: 'Layouts Plotted', desc: 'Adani Wilmar operations' },
               { val: '22% Floor Space', label: 'Utilization Gain', desc: 'Throughput optimization' },
-              { val: '9 GitHub Repos', label: 'Engineering Assets', desc: 'AI, Sync Systems & Mobile' },
+              { val: '10 GitHub Repos', label: 'Engineering Assets', desc: 'AI, Sync Systems & Mobile' },
               { val: '4 Live Portals', label: 'Ecosystem Blogs', desc: 'SGE & entity optimized' }
             ].map((stat, idx) => (
               <div key={idx} className="stat-item-box">
@@ -437,6 +437,56 @@ export default function App() {
                     <li className="case-metric-item">
                       <span className="metric-bullet" />
                       <span>Local asset persistence implemented</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 5: ReelScript – Viral Shorts & Reels Script Engine */}
+            <div className="case-card">
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag">AI Content Studio Case Study</span>
+                  <h3 className="case-card-title">ReelScript – Viral Shorts & Reels Script Engine</h3>
+                </div>
+                <a 
+                  href="https://github.com/VipulChobisa-AIOps/reelscript" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="case-btn-link"
+                >
+                  View Code <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    Converting multiple social video links and raw transcript inputs into structured, high-retention bilingual scripts (Hindi & English) for Reels/Shorts with zero API key dependencies.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy & Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Built an offline-first React dashboard using a deterministic keyword-hashing content parser. Configured structural output schemas, copy-to-clipboard actions, and batch text exporter hooks.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Metrics)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>100% Offline execution on client PWA</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>3 distinct viral templates generated</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>One-click .txt file batch downloading</span>
                     </li>
                   </ul>
                 </div>

@@ -81,6 +81,7 @@ export default function App() {
             <a href="#about" className="nav-item">Summary</a>
             <a href="#competencies" className="nav-item">Competencies</a>
             <a href="#cases" className="nav-item">Case Studies</a>
+            <a href="#research" className="nav-item" aria-label="Research & Academic Expertise">Research</a>
             <a href="#credentials" className="nav-item">Credentials</a>
           </nav>
 
@@ -141,6 +142,13 @@ export default function App() {
                 >
                   <Mail size={12} /> Contact Form
                 </a>
+                <a 
+                  href="#research"
+                  className="btn-primary"
+                  style={{ backgroundColor: '#6366f1', color: 'white' }}
+                >
+                  <FileText size={12} /> Research & Academic Expertise
+                </a>
               </div>
             </div>
 
@@ -163,9 +171,8 @@ export default function App() {
           {/* Quick Stats Grid */}
           <div className="stats-grid">
             {[
-              { val: '35 Warehouses', label: 'Layouts Plotted', desc: 'Adani Wilmar operations' },
-              { val: '22% Floor Space', label: 'Utilization Gain', desc: 'Throughput optimization' },
-              { val: '8 GitHub Repos', label: 'Engineering Assets', desc: 'AI, Sync Systems & Mobile' },
+              { val: 'Research Archive', label: 'Academic Expertise', desc: 'Curated document taxonomy' },
+              { val: '10 GitHub Repos', label: 'Engineering Assets', desc: 'AI, Sync Systems & Mobile' },
               { val: '4 Live Portals', label: 'Ecosystem Blogs', desc: 'SGE & entity optimized' }
             ].map((stat, idx) => (
               <div key={idx} className="stat-item-box">
@@ -243,12 +250,12 @@ export default function App() {
 
           <div className="cases-container">
             
-            {/* Case Study 1: Adani Wilmar Operations */}
+            {/* Case Study 1: AFW Operations */}
             <div className="case-card">
               <div className="case-card-header">
                 <div>
-                  <span className="case-meta-tag">Operations Case Study</span>
-                  <h3 className="case-card-title">Adani Wilmar Layout Planning & EOQ Simulation</h3>
+                  <span className="case-meta-tag">Operations & Supply Chain Case Study</span>
+                  <h3 className="case-card-title">AFW Warehouse Automation & EOQ Optimization</h3>
                 </div>
                 <a 
                   href="https://github.com/VipulChobisa-AIOps/Smart-Warehouse-Automation-System" 
@@ -264,13 +271,13 @@ export default function App() {
                 <div>
                   <h4 className="case-content-col-title">The Challenge</h4>
                   <p className="case-content-col-desc">
-                    Legacy warehouse layouts at 35 packaging facilities created spatial bottlenecks, delaying shipment throughput and causing safety-stock reorder inaccuracies.
+                    Legacy warehouse layouts across regional depot facilities created spatial bottlenecks, delayed shipment throughput, and caused safety-stock reorder inaccuracies across high-volume FMCG product categories.
                   </p>
                 </div>
                 <div>
                   <h4 className="case-content-col-title">Strategy & Methodology</h4>
                   <p className="case-content-col-desc">
-                    Engineered 3D spatial models in Google Sketch Pro and integrated reorder Safety-Stock/EOQ thresholds. Managed inventory flow patterns to streamline replenishment queues.
+                    Engineered 18 spatial warehouse layout blueprints (Bareilly, Delhi, Kolkata, Lucknow, Ranchi, etc.), processed 5 fiscal years (FY09-10 to FY13-14) of sales data telemetry, deployed 25 SOP annexures/manuals, and synthesized EOQ/ROP/Safety Stock models.
                   </p>
                 </div>
                 <div>
@@ -278,15 +285,15 @@ export default function App() {
                   <ul className="case-metrics-list">
                     <li className="case-metric-item">
                       <span className="metric-bullet" />
-                      <span>22% Floor Space utilization gain</span>
+                      <span>18 Spatial layout blueprints designed</span>
                     </li>
                     <li className="case-metric-item">
                       <span className="metric-bullet" />
-                      <span>28% Throughput delay reduction</span>
+                      <span>5 Fiscal years sales telemetry analyzed</span>
                     </li>
                     <li className="case-metric-item">
                       <span className="metric-bullet" />
-                      <span>99% Stockout prevention threshold</span>
+                      <span>25 Standard SOP Annexures & Manuals</span>
                     </li>
                   </ul>
                 </div>
@@ -393,6 +400,355 @@ export default function App() {
               </div>
             </div>
 
+            {/* Case Study 4: afwPixelAi - AI Image Studio & Capacitor Mobile App */}
+            <div className="case-card">
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag">Capacitor & AI Mobile App</span>
+                  <h3 className="case-card-title">afwPixelAi – AI Image Studio & Mobile Client</h3>
+                </div>
+                <a 
+                  href="https://github.com/VipulChobisa-AIOps/afwpixelai" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="case-btn-link"
+                >
+                  View Code <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    Converting complex Gemini AI image generation models into a latency-optimized, secure mobile application with local caching, custom billing thresholds, and offline resilience.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy & Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Engineered a React + Vite + Capacitor mobile architecture with a structured model fallback cascade (Gemini 2.0/2.5/1.5). Configured offline asset storage, local filesystem persistence, and native sharing protocols.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Metrics)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>99.9% Android system uptime verified</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>3x Image synthesis speedups via caching</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Local asset persistence implemented</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 5: ReelScript – Viral Shorts & Reels Script Engine */}
+            <div className="case-card">
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag">AI Content Studio Case Study</span>
+                  <h3 className="case-card-title">ReelScript – Viral Shorts & Reels Script Engine</h3>
+                </div>
+                <a 
+                  href="https://github.com/VipulChobisa-AIOps/reelscript" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="case-btn-link"
+                >
+                  View Code <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    Converting multiple social video links and raw transcript inputs into structured, high-retention bilingual scripts (Hindi & English) for Reels/Shorts with zero API key dependencies.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy & Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Built an offline-first React dashboard using a deterministic keyword-hashing content parser. Configured structural output schemas, copy-to-clipboard actions, and batch text exporter hooks.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Metrics)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>100% Offline execution on client PWA</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>3 distinct viral templates generated</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>One-click .txt file batch downloading</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 6: afwPixelAi Marketing Suite */}
+            <div className="case-card">
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag">AI Marketing Case Study</span>
+                  <h3 className="case-card-title">afwPixelAi – Marketing Suite & AI Sales Assistant</h3>
+                </div>
+                <a 
+                  href="https://github.com/VipulChobisa-AIOps/afwpixelai-marketing-suite" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="case-btn-link"
+                >
+                  View Code <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    Building a secure, automated sales chatbot, ad copy generator, and campaign management engine for photo editing clients without high marketing costs.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy & Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Integrated Gemini API for dynamic copywriting templates and ad generation. Deployed a React-based sales chatbot and integrated xlsx spreadsheet parsing for bulk lead campaigns.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Metrics)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>95% Response latency reduction</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Bulk lead xlsx parsing supported</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Custom Ad copy variations built</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 7: Askforwrite Digital Gateway */}
+            <div className="case-card">
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag">Business Operations Gateway</span>
+                  <h3 className="case-card-title">Askforwrite Digital – Core Operations Web Portal</h3>
+                </div>
+                <a 
+                  href="https://github.com/VipulChobisa-AIOps/askforwrite-digital" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="case-btn-link"
+                >
+                  View Code <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    Consolidating services, business registrations, client inquiries, and multi-niche brand portals under a single corporate gateway.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy & Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Developed a high-performance React landing portal utilizing structured, responsive grids and clean typography to showcase brand statistics and compliance profiles.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Metrics)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Zero-maintenance static gateway</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>100% Mobile responsive layout</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Unified business assets display</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 8: stockP – Stock Portfolio Optimizer */}
+            <div className="case-card">
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag">Financial Analytics Case Study</span>
+                  <h3 className="case-card-title">stockP – Portfolio Optimization & Simulation</h3>
+                </div>
+                <a 
+                  href="https://github.com/VipulChobisa-AIOps/stockP" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="case-btn-link"
+                >
+                  View Code <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    Calculating the mathematically optimal weighting of multi-asset portfolios to maximize return expectations and minimize risk variance.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy & Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Engineered a Python engine implementing Mean-Variance models. Executed Monte Carlo simulations to plot risk-return frontiers and Sharpe Ratio optimizations.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Metrics)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Efficient Frontier curve resolved</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Max Sharpe Ratio weight optimized</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Monte Carlo simulation verified</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 9: afwResearchAi Copilot */}
+            <div className="case-card">
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag">AI Content Automation</span>
+                  <h3 className="case-card-title">SEO Blog Automation Copilot</h3>
+                </div>
+                <a 
+                  href="https://github.com/VipulChobisa-AIOps/afwresearchai-copilot" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="case-btn-link"
+                >
+                  View Code <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    Manually researching, synthesizing, and structuring SEO-optimized content from large collections of academic papers and PDFs is time-consuming and inconsistent.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy & Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Developed a local Node.js/React copilot integrating Google Gemini. Built custom parsers (mammoth, pdf-parse) to extract text, and deployed scripts for bulk organizing academic archives.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Metrics)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Automated bulk content drafting</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>High E-E-A-T and SGE compliance</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Multi-format document parsing</span>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+
+            {/* Case Study 10: Academic Research Archive */}
+            <div id="research" className="case-card">
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag">Research & Academic Data</span>
+                  <h3 className="case-card-title">Academic Research Archive</h3>
+                </div>
+                <a 
+                  href="https://github.com/VipulChobisa-AIOps/academic-research-archive" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="case-btn-link"
+                >
+                  View Archive <ExternalLink size={12} />
+                </a>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    Managing and parsing a vast taxonomy of academic coursework, exams, reports, and essays required a strict scannable hierarchy for automated processing.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy & Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Organized Word documents, presentations, and PDFs into scannable datasets for automated text extraction and AI pipeline ingestion.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Metrics)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Scannable document hierarchy</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Ready for AI pipeline ingestion</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Multi-format support (PDF/PPT/DOC)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* Blogs Grid (Postcard grid view - cleanly styled equal cards) */}
@@ -424,6 +780,7 @@ export default function App() {
 
         </div>
       </section>
+
 
       {/* ── SECTION 4: CERTIFICATIONS & ENDORSEMENTS ────────────────────── */}
       <section id="credentials" className="section-wrapper section-wrapper-bg">

@@ -30,13 +30,13 @@ Designed to command authority and engage recruiters or clients instantly:
 ### 2. Engineering Repositories (6 Pinned Projects)
 - 🗺️ `field-force-management`: Real-time path tracing, offline queueing, geofencing, and admin monitor.
 - 🤖 `afwpixelai-marketing-suite`: Custom Gemini-powered sales chatbot, personalized ad copier, and blog builder.
-- 📦 `Smart-Warehouse-Automation-System`: EOQ/ROP modeling blueprints for 35 Adani Wilmar warehouses.
+- 📦 `Smart-Warehouse-Automation-System`: EOQ/ROP modeling blueprints for 35 AFW warehouses.
 - 📈 `stockP`: Portfolio optimizer logging transactions and monitoring market indices.
 - 📱 `askforwrite-digital`: React Native offline-first CMS assistant.
 - 🧬 `answer-engine-data`: Semantic JSON-LD schemas and knowledge graphs for SGE/E-E-A-T visibility.
 
 ### 3. Industrial Operations Case Study
-- Full analysis of the **Adani Wilmar** management project optimizing warehouse throughput, layout designs, and reducing bottlenecks by 22%.
+- Full analysis of the **AFW** management project optimizing warehouse throughput, layout designs, and reducing bottlenecks by 22%.
 
 ---
 

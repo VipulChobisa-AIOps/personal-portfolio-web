@@ -5,8 +5,7 @@ import {
   TrendingUp, 
   Cpu, 
   ExternalLink,
-  Database,
-  FileText
+  Database
 } from 'lucide-react';
 
 // Custom inline SVG icons for social logos to guarantee 100% build compatibility and exact sizing
@@ -83,6 +82,7 @@ export default function App() {
             <a href="#cases" className="nav-item">Case Studies</a>
             <a href="#research" className="nav-item" aria-label="Research & Academic Expertise">Research</a>
             <a href="#credentials" className="nav-item">Credentials</a>
+            <a href="https://os.askforwrite.com/" target="_blank" rel="noreferrer" className="nav-item" style={{ color: '#60a5fa' }}>Live AI OS ↗</a>
           </nav>
 
           <div className="header-socials">
@@ -113,41 +113,43 @@ export default function App() {
             
             {/* Left Column: Elevator Pitch */}
             <div className="hero-content">
-              <span className="badge-tag">Executive Profile</span>
+              <span className="badge-tag">Founder &amp; Chief AI-Ops Systems Architect · ASKFORWRITE</span>
               <h1 className="hero-title">
-                IT Operations & AI-Ops Specialist
+                IT Operations &amp; AI-Ops Systems Architect
               </h1>
               <p className="hero-desc">
-                Specializing in bridging computer engineering with supply chain logistics. I automate physical logistics workflows by deploying Agentic AI models, real-time path tracking systems, and spatial layout planning frameworks. 
+                Founder of ASKFORWRITE (MSME UDYAM-RJ-14-0018404) and architect of AskforWrite AI Company OS (os.askforwrite.com) — bridging Computer Engineering and Operations Management to deploy governed multi-agent AI fleets, StockSense warehouse optimization, Zero-Trust Field Force GPS, 0%-fee AFW DirectPay, and ECDSA NIST P-256 cryptographic audit ledgers.
               </p>
               
               <div className="cta-group">
                 <a 
-                  href="https://www.linkedin.com/feed/" 
+                  href="https://os.askforwrite.com/" 
                   target="_blank" 
                   rel="noreferrer"
                   className="btn-primary"
+                  style={{ backgroundColor: '#4f46e5', color: 'white' }}
                 >
-                  <LinkedinIcon size={12} /> LinkedIn Profile
+                  <ExternalLink size={12} /> Launch Live AI Company OS
                 </a>
                 <a 
                   href="#credentials"
                   className="btn-secondary"
                 >
-                  <FileText size={12} /> Download Dossier
+                  <Award size={12} /> Credentials &amp; MSME
                 </a>
                 <a 
-                  href="mailto:vipulchobisa@gmail.com"
+                  href="https://github.com/VipulChobisa-AIOps/askforwrite-ai-company-os" 
+                  target="_blank" 
+                  rel="noreferrer"
                   className="btn-secondary"
                 >
-                  <Mail size={12} /> Contact Form
+                  <GithubIcon size={12} /> Flagship Repo
                 </a>
                 <a 
-                  href="#research"
-                  className="btn-primary"
-                  style={{ backgroundColor: '#6366f1', color: 'white' }}
+                  href="mailto:info@askforwrite.in"
+                  className="btn-secondary"
                 >
-                  <FileText size={12} /> Research & Academic Expertise
+                  <Mail size={12} /> Contact
                 </a>
               </div>
             </div>
@@ -171,9 +173,9 @@ export default function App() {
           {/* Quick Stats Grid */}
           <div className="stats-grid">
             {[
-              { val: 'Research Archive', label: 'Academic Expertise', desc: 'Curated document taxonomy' },
-              { val: '10 GitHub Repos', label: 'Engineering Assets', desc: 'AI, Sync Systems & Mobile' },
-              { val: '4 Live Portals', label: 'Ecosystem Blogs', desc: 'SGE & entity optimized' }
+              { val: 'os.askforwrite.com', label: 'Live AI Company OS', desc: '4 AI Clusters · 5 Tiers · 16 SKUs' },
+              { val: '773+ Passing Tests', label: 'Production QA Verified', desc: '13 GitHub Repos · ECDSA P-256' },
+              { val: 'UDYAM-RJ-14-0018404', label: 'Registered MSME Firm', desc: 'ASKFORWRITE · GSC Verified (30 URLs)' }
             ].map((stat, idx) => (
               <div key={idx} className="stat-item-box">
                 <span className="stat-value">{stat.val}</span>
@@ -204,7 +206,7 @@ export default function App() {
                 <Award size={14} /> Frameworks & Methodologies
               </h3>
               <div className="competency-tag-container">
-                {['Agile/Scrum', 'EOQ Inventory Planning', 'ROP Reorder Points', 'SGE Optimization', 'E-E-A-T Content Audit', 'SDLC Frameworks'].map((f, i) => (
+                {['Multi-Agent AI Orchestration', 'HITL Governance', 'EOQ & ABC-XYZ Planning', 'ROP Reorder Points', '2026 SEO / AIO / GEO', 'Schema.org & /llms.txt', 'Agile/Scrum'].map((f, i) => (
                   <span key={i} className="competency-tag-item">{f}</span>
                 ))}
               </div>
@@ -216,7 +218,7 @@ export default function App() {
                 <Database size={14} /> Infrastructure & Tools
               </h3>
               <div className="competency-tag-container">
-                {['React', 'Node.js/Express', 'PostgreSQL', 'PostGIS Space Indexing', 'Firebase Auth/FCM', 'Git Version Control', 'Sketch Pro Flow modeling', 'Python/Pandas'].map((t, i) => (
+                {['Python / FastAPI', 'React 19 / TypeScript', 'Google Gemini BYOK', 'PostgreSQL / SQLAlchemy', 'ECDSA NIST P-256', 'AFW DirectPay (UPI/USDC)', 'PostGIS Spatial Indexing', 'Docker / Render'].map((t, i) => (
                   <span key={i} className="competency-tag-item">{t}</span>
                 ))}
               </div>
@@ -228,7 +230,7 @@ export default function App() {
                 <TrendingUp size={14} /> Business Skills
               </h3>
               <div className="competency-tag-container">
-                {['Budget Forecasting', 'Operations Management', 'Logistics Optimization', 'Semantic Search Graphing', 'Vendor Coordination', 'Risk Mitigation'].map((s, i) => (
+                {['Clustered SaaS Pricing', 'Operations Management', 'Logistics Optimization', 'Semantic Entity Graphing', 'DirectPay Settlement Ops', 'MSME Compliance & Risk'].map((s, i) => (
                   <span key={i} className="competency-tag-item">{s}</span>
                 ))}
               </div>
@@ -249,6 +251,79 @@ export default function App() {
           </div>
 
           <div className="cases-container">
+
+            {/* Flagship Completed Project: AskforWrite AI Company OS */}
+            <div className="case-card" style={{ borderColor: 'rgba(99, 102, 241, 0.55)', background: 'linear-gradient(180deg, rgba(79,70,229,0.10), var(--bg-card))' }}>
+              <div className="case-card-header">
+                <div>
+                  <span className="case-meta-tag" style={{ color: '#a5b4fc' }}>Flagship Production Release · Live at os.askforwrite.com</span>
+                  <h3 className="case-card-title">AskforWrite AI Company OS — Governed Multi-Agent Business OS</h3>
+                </div>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  <a 
+                    href="https://os.askforwrite.com/" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="case-btn-link"
+                    style={{ borderColor: '#6366f1', color: '#c7d2fe' }}
+                  >
+                    Live Platform <ExternalLink size={12} />
+                  </a>
+                  <a 
+                    href="https://os.askforwrite.com/services" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="case-btn-link"
+                  >
+                    Clustered Pricing <ExternalLink size={12} />
+                  </a>
+                  <a 
+                    href="https://github.com/VipulChobisa-AIOps/askforwrite-ai-company-os" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="case-btn-link"
+                  >
+                    View Code <ExternalLink size={12} />
+                  </a>
+                </div>
+              </div>
+
+              <div className="case-content-grid">
+                <div>
+                  <h4 className="case-content-col-title">The Challenge</h4>
+                  <p className="case-content-col-desc">
+                    SMBs and logistics operators juggle disconnected marketing agencies, manual SDR outreach, unaudited spreadsheets, and high payment gateway fees with zero cryptographic auditability or AI data privacy.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">Strategy &amp; Methodology</h4>
+                  <p className="case-content-col-desc">
+                    Architected a full-stack multi-tenant Company OS (FastAPI + PostgreSQL + PWA) organizing 16 tools into 4 functional AI clusters across 5 clustered tiers (₹2,999–₹44,999/mo): Content/SEO/Pixel AI, 24/7 AI Sales Closer, 4 Vertical AI engines (Warehouse StockSense, Field Force GPS, Produce Vision 512D HSV+GLCM, Urban Mobility), Strict BYOK Gemini isolation, AFW DirectPay (0%-fee ISO UPI QR / Web3 USDC / Wire), and an ECDSA NIST P-256 Merkle Trust Ledger.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="case-content-col-title">The Impact (Verified Live)</h4>
+                  <ul className="case-metrics-list">
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>773+ automated tests passing &amp; full P1–P8 QA audit signed off</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>Live on os.askforwrite.com · GSC verified (30/30 sitemap URLs)</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>95/100 SEO/AIO stack (/llms.txt, /llms-full.txt, Schema.org @graph)</span>
+                    </li>
+                    <li className="case-metric-item">
+                      <span className="metric-bullet" />
+                      <span>0%-fee DirectPay ISO UPI QR + Web3 USDC + Razorpay/PayPal</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             
             {/* Case Study 1: AFW Operations */}
             <div className="case-card">
@@ -697,6 +772,7 @@ export default function App() {
                     </li>
                   </ul>
                 </div>
+              </div>
             </div>
 
             {/* Case Study 10: Academic Research Archive */}
@@ -794,41 +870,76 @@ export default function App() {
 
           <div className="credentials-row">
             
-            {/* Left: Credentials list */}
+            {/* Left: Academic, Enterprise & Verified Production Credentials */}
             <div className="credentials-column">
-              <span className="cred-title-section">Academic Credentials</span>
+              <span className="cred-title-section">Academic, Statutory &amp; Production Credentials</span>
               <div className="cred-list">
                 
                 <div className="cred-item-box">
                   <div className="cred-icon-box">B</div>
                   <div>
                     <h4 className="cred-item-title">B.Tech in Computer Engineering</h4>
-                    <p className="cred-item-desc">Engineering systems core, networking algorithms, and data modeling.</p>
+                    <p className="cred-item-desc">Engineering systems core, distributed networking algorithms, cryptographic security, and data modeling.</p>
                   </div>
                 </div>
                 
                 <div className="cred-item-box">
                   <div className="cred-icon-box">M</div>
                   <div>
-                    <h4 className="cred-item-title">MBA in Operations & Production Management</h4>
-                    <p className="cred-item-desc">Industrial operations management, supply chain layout, and queue control.</p>
+                    <h4 className="cred-item-title">MBA in Operations &amp; Production Management</h4>
+                    <p className="cred-item-desc">Industrial operations management, ABC-XYZ/EOQ inventory optimization, supply chain layout, and queue control.</p>
+                  </div>
+                </div>
+
+                <div className="cred-item-box" style={{ borderColor: 'rgba(16, 185, 129, 0.35)' }}>
+                  <div className="cred-icon-box" style={{ color: '#34d399', borderColor: 'rgba(16, 185, 129, 0.35)' }}>GOI</div>
+                  <div>
+                    <h4 className="cred-item-title">Registered MSME Enterprise — ASKFORWRITE (UDYAM-RJ-14-0018404)</h4>
+                    <p className="cred-item-desc">Ministry of Micro, Small &amp; Medium Enterprises, Government of India · Founder &amp; Principal Compliance Officer (Udaipur, Rajasthan). <a href="https://os.askforwrite.com/legal/declaration" target="_blank" rel="noreferrer" style={{ color: '#60a5fa', textDecoration: 'underline' }}>Verify Charter ↗</a></p>
+                  </div>
+                </div>
+
+                <div className="cred-item-box" style={{ borderColor: 'rgba(99, 102, 241, 0.4)' }}>
+                  <div className="cred-icon-box" style={{ color: '#a5b4fc', borderColor: 'rgba(99, 102, 241, 0.4)' }}>OS</div>
+                  <div>
+                    <h4 className="cred-item-title">AskforWrite AI Company OS — Production Release Verified (os.askforwrite.com)</h4>
+                    <p className="cred-item-desc">773+ automated tests passing across P1–P8, full 4-phase System QA Audit completed, ECDSA NIST P-256 Merkle Trust Ledger, Strict BYOK Gemini isolation, and 0%-fee AFW DirectPay live in production.</p>
+                  </div>
+                </div>
+
+                <div className="cred-item-box" style={{ borderColor: 'rgba(56, 189, 248, 0.35)' }}>
+                  <div className="cred-icon-box" style={{ color: '#38bdf8', borderColor: 'rgba(56, 189, 248, 0.35)' }}>SEO</div>
+                  <div>
+                    <h4 className="cred-item-title">2026 Technical SEO, AIO &amp; GEO Architecture — Live &amp; GSC Verified</h4>
+                    <p className="cred-item-desc">Google Search Console verified (30/30 canonical sitemap URLs discovered), public SSR commercial homepage, /llms.txt + /llms-full.txt, and unified Schema.org @graph across os.askforwrite.com &amp; askforwrite.com.</p>
                   </div>
                 </div>
 
               </div>
             </div>
 
-            {/* Right: Testimonial Quote */}
+            {/* Right: Testimonial Quote & Live Platform Links */}
             <div className="credentials-column">
               <div>
                 <span className="cred-title-section">Professional Philosophy</span>
                 <blockquote className="philosophy-blockquote">
-                  "I don't just study technology — I build it, deploy it, and use it to solve real physical operational problems at scale. Blending computer engineering with production management is about closing the operational gap."
+                  "I don't just study technology — I build it, deploy it, and use it to solve real physical operational problems at scale. Blending computer engineering with production management is about closing the operational gap with cryptographic proof and zero fluff."
                 </blockquote>
               </div>
               <div>
                 <span className="philosophy-author">Vipul Kumar Chobisa</span>
-                <span className="philosophy-sub">AI-Ops Architect</span>
+                <span className="philosophy-sub">Founder &amp; Chief AI-Ops Systems Architect · ASKFORWRITE (UDYAM-RJ-14-0018404)</span>
+                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginTop: '14px' }}>
+                  <a href="https://os.askforwrite.com/" target="_blank" rel="noreferrer" className="btn-primary" style={{ backgroundColor: '#4f46e5' }}>
+                    <ExternalLink size={12} /> Visit os.askforwrite.com
+                  </a>
+                  <a href="https://os.askforwrite.com/services" target="_blank" rel="noreferrer" className="btn-secondary">
+                    <Layers size={12} /> Clustered Subscriptions
+                  </a>
+                  <a href="https://os.askforwrite.com/solutions" target="_blank" rel="noreferrer" className="btn-secondary">
+                    <Cpu size={12} /> Vertical AI Suites
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -845,7 +956,7 @@ export default function App() {
           </div>
           
           <p className="footer-desc">
-            AI-Ops Specialist · B.Tech (Computer Engineering) & MBA (Operations & Production Management)
+            Founder &amp; Chief AI-Ops Systems Architect — ASKFORWRITE (UDYAM-RJ-14-0018404) · Live OS: <a href="https://os.askforwrite.com/" target="_blank" rel="noreferrer" style={{ color: '#60a5fa', textDecoration: 'none' }}>os.askforwrite.com</a> · B.Tech (CS) &amp; MBA (Operations)
           </p>
 
           <div className="social-links-row">
